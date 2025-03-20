@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements Reference - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Project 2</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">About Me</a></li>
+							<li><a href="ETL.html">Project 1</a></li>
+							<li><a href="flameAI.html">Projects in Progress</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+                    <div id="main">
+                        <section class="post">
+                            <header>
+                                <h2>Project Description: Product Sales and Promotions Analysis</h2>
+                            </header>
+                    <p>This project focuses on analyzing product sales, agent performance, and promotional effectiveness using SQL. The dataset includes sales transactions, promotions, and agent details, structured within a data warehouse. The goal is to extract insights that help optimize sales strategies, customer targeting, and promotional efficiency.</p>
+                    <div class="row">
+                        <div class="col-6 col-12-small">
+
+                            <h3>Key Tasks Performed:</h3>
+                            <ul>
+                                <li>Designed and structured a relational Database for efficient data storage and retrieval</li>
+                                <li>Ingested and cleaned sales dat using SQL, ensuring data integrity and consistency</li>
+                                <li>Evaluated promotional campaigns, identifying which promotions led to the highest sales uplift</li>
+                                <li>Created aggregated sales reports, tracking revenue trends and customer purchasing behavior.</li>
+                            </ul>
+                            </div>
+                        
+                        <header>
+                            <h2>Creating Key Tables (Data Modeling)</h2>
+                            <p>Structured database schema to support sales and promotional analysis.</p>
+                        </header>
+                            <pre><code>
+                                CREATE TABLE STAGE_DW.Agents (
+                                    AGENT_ID INT PRIMARY KEY,
+                                    AGENT_EXPERIENCE_LEVEL NVARCHAR(50),
+                                    AGENT_EDUCATION_LEVEL NVARCHAR(50)
+                                );
+                                
+                                CREATE TABLE STAGE_DW.Promotions (
+                                    PROMO_ID INT PRIMARY KEY,
+                                    PROMO_NAME VARCHAR(30) NOT NULL,
+                                    PROMO_SUBCATEGORY VARCHAR(30) NOT NULL
+                                );
+                        </code></pre>
+                    <header>
+                        <h2>Sales Performance Analysis by Agent</h2>
+                        <p>Identifies top-performing agents based on sales revenue and experience level.</p>
+                    </header>
+                        <pre><code>
+                                SELECT a.AGENT_ID, a.AGENT_EXPERIENCE_LEVEL, 
+                                COUNT(s.SALE_ID) AS Total_Sales, 
+                                SUM(s.SALE_AMOUNT) AS Total_Revenue
+                                FROM Sales s
+                                JOIN Agents a ON s.AGENT_ID = a.AGENT_ID
+                                GROUP BY a.AGENT_ID, a.AGENT_EXPERIENCE_LEVEL
+                                ORDER BY Total_Revenue DESC;
+                         
+                        </code></pre>
+                    <header>
+                        <h2>Analyzing Promotion Effectiveness</h2>
+                        <p>Reveals which promotions drive the highest revenue and sales volume.</p>
+                    </header>
+                        <pre><code>
+                                SELECT p.PROMO_NAME, COUNT(s.SALE_ID) AS Sales_During_Promo, 
+                                SUM(s.SALE_AMOUNT) AS Revenue_Generated
+                                FROM Sales s
+                                JOIN Promotions p ON s.PROMO_ID = p.PROMO_ID
+                                GROUP BY p.PROMO_NAME
+                                ORDER BY Revenue_Generated DESC;
+                        </code></pre>
+                    
+                    <header>
+                        <h2>Customer Purchasing Trends</h2>
+                        <p>Tracks monthly sales trends to identify peak purchasing periods.</p>
+                    </header>
+                        <pre><code>
+                            SELECT FORMAT(SALE_DATE, 'yyyy-MM') AS Sales_Month, 
+                            COUNT(SALE_ID) AS Total_Sales, 
+                            SUM(SALE_AMOUNT) AS Total_Revenue
+                            FROM Sales
+                            GROUP BY FORMAT(SALE_DATE, 'yyyy-MM')
+                            ORDER BY Sales_Month;
+                        </code></pre>
+                            </section>
+                            <ul class="actions special">
+                                <li><a href="https://github.com/Stephkd123/Portfolio-Projects/blob/main/ProductSalesProject.sql" class="button large">View Git File</a></li>
+                            </ul>
+                            <ul class="actions special">
+                                <li><a href="https://public.tableau.com/app/profile/stephen.keyen/viz/ProductSalesAnalysis_17401625434320/Dashboard1?publish=yes" class="button large">View Dashboard</a></li>
+                            </ul>
+                        </div>
+                    <div id="copyright">
+						<ul><li>BY Stephen Keyen II</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+        </div>
+	</body>
+</html>

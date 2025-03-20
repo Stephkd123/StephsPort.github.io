@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements Reference - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Project 1</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">About Me</a></li>
+							<li><a href="sales.html">Project 2</a></li>
+							<li><a href="flameAI.html">Projects in Progress</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+                    <div id="main">
+                        <section class="post">
+                            <header>
+                                <h2>Project Description: Comprehensive ETL process for Movie Rental System</h2>
+                            </header>
+                    <p>This project demonstrates the design and implementation of a data warehouse for a movie rental system, showcasing the entire ETL (Extract, Transform, Load) process. The goal is to enhance sales, marketing, and operational efficiency by tracking product sales, improving revenue, ensuring accurate reporting, and gaining customer insights. This project highlights my proficiency in data warehousing, ETL processes, and business intelligence.</p>
+                    <div class="row">
+
+                            <h3>Key components:</h3>
+                            <ol>
+                            <b><li>Organizational Context and Goals</li></b>
+                            <ul>
+                                <li>Revenue and Sales Growth: Tracking Movie rental over time to improve top-line revenue and profitability.</li>
+                                <li>Operational Efficiency: Ensuring consistent and accurate reporting across various dimensions.</li>
+                                <li>Customer Insights: Understanding customer behavior and market effectiveness.</li>
+                                <li>Marketing Effectiveness: Measuring the success of marketing campaigns and channels</li>
+                            </ul>
+                            
+                            <b><li>ETL Process Overview</li></b>
+                            <ul>
+                                <li>Extract Phase: Data is extracted from various source systems and copied to a staging area. This includes tables such as orders, order items, agents, products, subcategories, categories, and customers.</li>
+                                <li>Transform Phase: Data is cleaned, merged, and standardized. Key transformations include:</li>
+                                <li>Dim_Customers: Merging internal and external customer data, standardizing marital status, and adding effective and end dates for tracking historical changes.<br />
+                                    Dim_film: Updating film Language, also updated movie ratings e.g NC-17 to Adults only,and more...<br />
+                                    Dim_Staff:Updating staff date format for better analysis<br />
+                                    Dim_Store: Updating important Store Date format for consistency and correcting current address.</li>
+                                <li>Load Phase: Transformed data is loaded into the final project database, including tables such as Dim_customers, Dim_film, Dim_store, Dim_staff, Dim_time, Dim_date.</li>
+                            </ul>
+                            <b><li>Physical Database Design</li></b>
+                            <ul>
+                                <li>Fact Table: Captures granular movie rantal data, including customer interactions, Actors, and store location.</li>
+                                <li>Dimension Tables: Detailed information about films, customers, Time & Date , Actors, and store location.</li>
+                                <li>Storage Estimation: Calculations for current and projected storage requirements, ensuring scalability for future growth.</li>
+                            </ul>
+                            <b><li>Indexing and Query Optimization</li></b>
+                            <ul>
+                                <li>
+                                    Indexing: Creating indexes on key columns to optimize query performance.</li>
+                            </ul>
+                            <b><li>Metadata Management</li></b>
+                            <ul>
+                                <li>Source Table Metadata: Detailed descriptions of source tables and their columns.</li>
+                                <li>Transform Phase Metadata: Documentation of transformations applied to data during the ETL process.</li>
+                                <li>Key Business KPIs: Metrics for sales analysis, agent performance, marketing effectiveness, financial health, and scalability.</li>
+                            </ul> 
+                            <b> <li>Screenshots and logs</li></b>
+                            <ul>
+                                <li>
+                                    ETL Process Execution: Screenshots of successful ETL runs, including extract, transform, and load step logs</li>
+                            </ul>
+                        </ol>
+                        </div>
+                        <p> <b>This project showcases my ability to design and implement a robust data warehousing solution, manage complex ETL processes, and provide actionable business insights through decision support views and optimized queries. It highlights my technical skills in data extraction, transformation, and loading, as well as my understanding of business intelligence and data analytics, making me a strong candidate for data science roles. </b></p>               
+                                 </section>
+                            <ul class="actions special">
+                                <li><a href="https://github.com/Stephkd123/Portfolio-Projects/blob/main" class="button large">View Git File</a></li>
+                            </ul>
+                        </div>
+                    <div id="copyright">
+						<ul><li>BY Stephen Keyen II</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+        </div>
+	</body>
+</html>

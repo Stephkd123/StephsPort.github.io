@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements Reference - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">FlameAI & TransitRec:Olympics2028 (In-Progress)</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">About Me</a></li>
+							<li><a href="ETL.html">Project 1</a></li>
+                            <li><a href="sales.html">Project 2</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+                    <div id="main">
+                        <section class="post">
+                            <header>
+                                <i><h1>FlameAI</h1></i>
+                                <h2>Project Description:</h2>
+                            </header>
+                    <p>Flame_AI is an AI-powered information assistant designed to provide students, faculty, and visitors with real-time, accurate, and structured responses about Claremont Graduate University (CGU). Built using Streamlit, OpenAI’s GPT-4o, and Tavily Search, the project enables users to retrieve up-to-date information on course registration, student events, career opportunities, and administrative resources with a conversational AI interface.</p>
+                    
+                        <div class="col-6 col-12-small">
+
+                            <h3>Key features:</h3>
+                            <ul>
+                                <li>Conversational AI Agent – Developed an LLM-powered chatbot using LangChain to engage users in dynamic conversations</li>
+                                <li>Live Web Search Integration – Implemented Tavily Search API to provide the latest CGU-related information, ensuring responses are always relevant.</li>
+                                <li>Custom Chat Prompt Engineering – Designed a structured AI reasoning framework to deliver context-aware and structured responses.</li>
+                                <li>User-Friendly Web Application – Built with Streamlit, offering an intuitive interface for users to interact seamlessly.</li>
+                            </ul>
+                            </div>
+                        
+                        <header>
+                            <h2>Initializing the AI Chat Model</h2>
+                            <p>Optimized GPT model for precise and context-aware conversations.</p>
+                        </header>
+                            <pre><code>
+                                from langchain_openai import ChatOpenAI
+
+                                # Load API key from environment variables
+                                openai_api_key = os.getenv("OPENAI_API_KEY")
+
+                                # Initialize GPT-4o model with optimized temperature settings
+                                llm_gpt = ChatOpenAI(model_name="gpt-4o", temperature=0.4)
+                        </code></pre>
+                    <header>
+                        <h2>Implementing Real-Time Web Search for Up-to-Date Responses</h2>
+                        <p>Enhances the AI assistant’s ability to fetch and provide current, validated information.</p>
+                    </header>
+                        <pre><code>
+                            from langchain_community.tools import TavilySearchResults
+                            from langchain_core.tools import Tool
+                            
+                            # Initialize search tool
+                            tavily_search = TavilySearchResults(
+                                max_results=3, search_depth="advanced", include_answer=True,
+                                api_key=os.getenv("TAVILY_API_KEY")
+                            )
+                            
+                            # Create tool for CGU-specific searches
+                            tools = [
+                                Tool(
+                                    name="SearchCGU",
+                                    func=tavily_search.invoke,
+                                    description="Fetches real-time CGU-related information: events, courses, tuition, career opportunities."
+                                )
+                            ]                            
+                         
+                        </code></pre>
+                        <h3>Future Improvements:</h3>
+                            <ul>
+                                <li>Developing AI-Powered Response Generation with a Custom Chat Agent</li>
+                                <li>Establishing an efficient RAG achitecture for better query responses</li>
+                                <li>more unit and Integration testing</li>
+                            </ul>
+                            </section>
+                            
+                            
+                        </div>
+                    <div id="copyright">
+						<ul><li>BY Stephen Keyen II</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+        </div>
+	</body>
+</html>

@@ -11,6 +11,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+	 .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1c1c1c, #3a3a3a); /* Dark gradient background */
+            padding: 10px;
+        }
+
+        .profile-image {
+            width: 800px; /* Keep original width */
+            height: 700px; /* Keep original height */
+            object-fit: contain; /* Ensures full image is visible */
+            border-radius: 20px; /* Slight rounding for smooth edges */
+            background: #222; /* Fallback dark background */
+            padding: 5px;
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.6);
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -19,7 +38,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="generic.html" class="logo">About Steph Keyen</a>
+						<a href="generic.html" class="logo">Hello! from this side</a>
 					</header>
 
 				<!-- Nav -->
@@ -27,9 +46,9 @@
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="generic.html">About Me</a></li>
-							<li><a href="elements.html">Project 1</a></li>
-							<li><a href="elements.html">Project 2 </a></li>
-							<li><a href="elements.html">Projects in Progress</a></li>
+							<li><a href="ETL.html">Project 1</a></li>
+							<li><a href="sales.html">Project 2</a></li>
+							<li><a href="flameAI.html">Projects in Progress</a></li>
 						</ul>
 					</nav>
 
@@ -43,10 +62,13 @@
 									<p>MS. Information systems and technology - Claremont Graduate University, CA USA <br />
 									   BSc. Computer Science and technology - Shenyang Institute of Engineering, Liaoning, China<br /></p>
 								</header>
-								<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" width: 70px; height: 70px/></a>
-<!-- 								<img src="images/pic10.jpg" alt="" width= 1200 height= 700/> -->
-								<p><b>I am a data scientist and analyst with a passion for transforming complex datasets into actionable insights that drive decision-making. Currently completing my master’s in information systems and technology, concentration in data science and Analytics at Claremont Graduate University (Graduating May 2025), I have developed a strong foundation in SQL, Python, machine learning, and data engineering—skills that I have applied in real-world projects and internships.
-                                                                   With experience as a Data Science Intern at LifeNet Health, I worked extensively with Azure SQL databases, also collaborating with a strong team of professionals, conducting feature engineering, statistical modeling, and data visualization to improve tissue suitability predictions and understanding processes in tissue recovery affecting tissue suitability. My work in medical data analysis, customer segmentation, and ETL pipeline development demonstrates my ability to work across diverse industries, tackling complex problems with data-driven solutions.
+								<!-- <a href="#"><img src="images/pic10.jpg" alt="" width: 500; height: 500px/></a> -->
+								<div class="image-container">
+									<img src="images/pic10.jpg" alt="Your Profile" class="profile-image">
+								</div>
+								<!-- <img src="images/pic10.jpg" alt="" width= 800 height= 700/>  -->
+								<p><b>I am a data science specialist with a passion for transforming complex datasets into actionable insights that drive decision-making. Currently completing my master’s in information systems and technology, concentration in data science and Analytics at Claremont Graduate University (Graduating May 2025), I have developed a strong foundation in SQL, Python, machine learning, and data engineering—skills that I have applied in real-world projects and internships.
+                                                                   With experience as a Data Science Intern at LifeNet Health, I worked extensively with Azure SQL databases, also collaborating with a strong team of professionals, conducting feature engineering, statistical modeling, and data visualization to improve tissue suitability predictions and understanding processes in tissue recovery correlating with tissue suitability. My work in medical data analysis, customer segmentation, and ETL pipeline development demonstrates my ability to work across diverse industries, tackling complex problems with data-driven solutions.
 							           Beyond technical expertise, I bring strong people skills, developed through my role as a Teaching Assistant in Database Management, where I guided graduate students in mastering SQL and database design. My ability to communicate complex data insights in an understandable and actionable manner makes me an asset to any data-driven team.
 							           Outside of work, I am a dedicated soccer fan and player, always finding time to enjoy the sport that has taught me teamwork, strategic thinking, and perseverance. I also have a keen interest in video games, particularly those that challenge problem-solving and strategy—skills that I bring into my analytical work.
 								</b> </p>
