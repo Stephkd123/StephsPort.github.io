@@ -25,10 +25,11 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
 							<li><a href="generic.html">About Me</a></li>
-							<li><a href="ETL.html">1:Data Engineer</a></li>
-							<li><a href="sales.html">2:Data Analyst </a></li>
+							<li><a href="ETL.html">1:Engineer</a></li>
+							<li><a href="sales.html">2:Analyst </a></li>
+							<li><a href="DS_ML.html">4: Data / ML Engineer</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -41,24 +42,27 @@
                                 <i><h1>FlameAI</h1></i>
                                 <h2>Project Description:</h2>
                             </header>
-                    <p>Flame_AI is an AI-powered information assistant designed to provide students, faculty, and visitors with real-time, accurate, and structured responses about Claremont Graduate University (CGU). Built using Streamlit, OpenAI’s GPT-4o, and Tavily Search, the project enables users to retrieve up-to-date information on course registration, student events, career opportunities, and administrative resources with a conversational AI interface.</p>
+                    <p>AI assistant for University students, staff, and alumni: This is an AI-powered agent, developed in collaboration with a team of graduate students and professors at the Center for Information Systems and Technology (CIST) department. The chatbot, named FlameAI, was designed to enhance campus engagement and accessibility by providing real-time, structured responses to inquiries related to Claremont Graduate University. Built using Streamlit, OpenAI's GPT-4o, LangChain, and the Tavily Search API, FlameAI integrates live search capabilities and custom prompt engineering to deliver accurate, up-to-date information about academic programs, student services, events, administrative resources, and more.
+                        The project showcases applied skills in generative AI, conversational design, and full-stack development. As part of its architecture, the chatbot employs retrieval-augmented generation (RAG) techniques, vector-based search tools, and prompt chaining for structured responses. It also features a user-friendly web interface and was developed with scalability and future customization in mind. FlameAI represents a meaningful step toward integrating responsible AI into educational institutions and reflects my interest in building impactful AI systems that improve access to information and user experience.
+                        </p>
                     
                         <div class="col-6 col-12-small">
 
                             <h3>Key features:</h3>
                             <ul>
                                 <li>Conversational AI Agent – Developed an LLM-powered chatbot using LangChain to engage users in dynamic conversations</li>
-                                <li>Live Web Search Integration – Implemented Tavily Search API to provide the latest CGU-related information, ensuring responses are always relevant.</li>
-                                <li>Custom Chat Prompt Engineering – Designed a structured AI reasoning framework to deliver context-aware and structured responses.</li>
-                                <li>User-Friendly Web Application – Built with Streamlit, offering an intuitive interface for users to interact seamlessly.</li>
+                                <li>Live Web Search Integration – Implemented Tavily Search API to provide the latest CGU-related information, granting the chatbot access to current information on the web, ensuring responses meant relevace goals.</li>
+                                <li>Custom Agent network – Powered the construction of a multi-agent conversational flow using LangGraph, Designed a structured reasoning framework to deliver context-aware responses, with autonomous agents to check and balance agents' responces.</li>
+                                <li>User-Friendly Web Application – Built with Streamlit framework, offering an intuitive interface for users to interact seamlessly.</li>
+                                <li>Secure and scalable –  Securely loaded API keys and environment configurations, supporting best practices in secrets management and making the application easily portable across different environments (local, staging, production)</li>
                             </ul>
                             </div>
                         
-                        <header>
+                        <!-- <header>
                             <h2>Initializing the AI Chat Model</h2>
                             <p>Optimized GPT model for precise and context-aware conversations.</p>
-                        </header>
-                            <pre><code>
+                        </header> -->
+                            <!-- <pre><code>
                                 from langchain_openai import ChatOpenAI
 
                                 # Load API key from environment variables
@@ -66,12 +70,12 @@
 
                                 # Initialize GPT-4o model with optimized temperature settings
                                 llm_gpt = ChatOpenAI(model_name="gpt-4o", temperature=0.4)
-                        </code></pre>
-                    <header>
+                        </code></pre> -->
+                    <!-- <header>
                         <h2>Implementing Real-Time Web Search for Up-to-Date Responses</h2>
                         <p>Enhances the AI assistant’s ability to fetch and provide current, validated information.</p>
-                    </header>
-                        <pre><code>
+                    </header> -->
+                        <!-- <pre><code>
                             from langchain_community.tools import TavilySearchResults
                             from langchain_core.tools import Tool
                             
@@ -90,8 +94,8 @@
                                 )
                             ]                            
                          
-                        </code></pre>
-                        <h3>Future Improvements:</h3>
+                        </code></pre> -->
+                        <!-- <h3>Future Improvements:</h3>
                             <ul>
                                 <li>Developing AI-Powered Response Generation with a Custom Chat Agent</li>
                                 <li>Integrating a vector database with a good RAG architecture</li>
@@ -99,7 +103,7 @@
                                 <li>final design considerations based on technical needs to host the model or open sourse. </li>
                                 <li>more unit and Integration testing</li>
 
-                            </ul>
+                            </ul> -->
                             <article class="post featured">
 								<a href="#" class="image main"><img src="images/flameAI.png" alt="" /></a>
                                 <a href="#" class="image main"><img src="images/Agentic_Rag.png" alt="" /></a>
@@ -113,25 +117,27 @@
                                 <i><h1>AI-Powered Career Evaluator (ACE)</h1></i>
                                 <h2>Project Description:</h2>
                             </header>
-                    <p>ACE is an intelligent agentic chatbot designed to support university students looking to break into the tech industry, through personalized resume reviews, interview prep, and job-market insights considering the rapid growth in the tech industry. The system uses Retrieval-Augmented Generation (RAG) and LangChain agents to deliver real-time, user support.
+                    <p>ACE is an intelligent, agentic chatbot developed to assist university students transitioning into the tech industry. Created through a collaborative effort with graduate peers and faculty at the Center of Information Systems and Technology, ACE functions as a personalized AI assistant offering resume feedback, interview preparation, and real-time insights into tech job markets. Built with Retrieval-Augmented Generation (RAG) and OpenAI’s GPT-4o and GPT-4o-mini, the chatbot delivers structured, relevant, and context-aware responses to support users at every stage of their career development.
+                        By combining natural language understanding, real-time semantic retrieval, and intelligent workflow orchestration, ACE bridges the gap between academic experience and industry expectations. It’s designed to simulate personalized guidance, emulate expert support, and scale with user needs, making it a robust solution for students navigating today’s competitive job landscape.</p>
                     
                         <div class="col-6 col-12-small">
 
                             <h3>Key features:</h3>
                             <ul>
-                                <li>LLM agent framework using LangChain + OpenAI GPT-4o & GPT-4omini</li> 
-                                <li>Dynamic prompt engineering for role-specific support</li> 
-                                <li>Integrated PGVector for semantic search (in progress)</li> 
-                                <li>Streamlit-based UX with LangSmith feedback tracing</li> 
+                                <li>LLM Agent Framework: Integrated LangChain agents with OpenAI’s GPT-4o and GPT-4o-mini to enable real-time, multi-turn conversations grounded in role-specific guidance and context-aware decision making.</li> 
+                                <li>Dynamic Prompt Engineering: Implemented modular and role-adaptive prompts, allowing the system to tailor responses for different tech roles (e.g., Data Analyst, AI Engineer, Software Developer), enhancing personalization.</li> 
+                                <li>Retrieval-Augmented Generation (RAG): Combined PGVector with a custom document index to support semantic search, enabling accurate, up-to-date answers from curated resources like interview guides, resume templates, and job descriptions.</li>
+                                <li>Streamlit-Based UX: Built a responsive and user-friendly frontend using Streamlit, offering a clean and intuitive interface for real-time interaction, feedback display, and debugging support.</li> 
+                                <li>LangSmith Feedback Integration: Integrated LangSmith tracing to monitor agent responses, track conversation flows, and continuously improve the quality and safety of model outputs based on user interactions.</li> 
                             </ul>
                             </div>
                         
-                        <h3>Future Improvements & Contraints:</h3>
+                        <!-- <h3>Future Improvements & Contraints:</h3>
                             <ul>
                                 <li>Redesign the user interface to be more intuitive, visually appealing, and consistent with CGU’s digital branding, including mobile responsiveness. As part of this, implement profile-based personalization to tailor content and recommendations based on students’ specialization, skill set, and career objectives.</li>
                                 <li>Develop a student dashboard feature for tracking applications, saved opportunities, upcoming appointments, and relevant career resources.</li>
                                 <li>Enable appointment scheduling with the Career & Professional Development Office via Handshake, allowing students to book sessions directly through the chatbot. This can also be used as a fallback feature in the case that the chatbot cannot provide specific information</li>
-                            </ul>
+                            </ul> -->
                             <article class="post featured">
 								<a href="#" class="image main"><img src="images/ACE.jpg" alt="" /></a>
                                 <a href="#" class="image main"><img src="images/ACE AGENT RAG.png" alt="" /></a>
@@ -141,7 +147,7 @@
                                 </ul>
 							</article>
 
-                            <h2>Project 3:</h2>
+                            <!-- <h2>Project 3:</h2>
                             <header>
                                 <i><h1>LATransitRec: Olympics2028</h1></i>
                                 <h2>Project Description:</h2>
@@ -175,7 +181,7 @@
                                 <ul class="actions special">
                                     <li><a href="https://github.com/Stephkd123/Portfolio-Projects/blob/main" class="button large">View Git File</a></li>
                                 </ul>
-							</article>
+							</article> -->
  
                         </div>
                     <div id="copyright">
