@@ -85,64 +85,32 @@
                                 <li>Clear documentation of every decision and process.</li>
                             </ul>
                         </header>
-                            <!-- <pre><code>
-                                CREATE TABLE STAGE_DW.Agents (
-                                    AGENT_ID INT PRIMARY KEY,
-                                    AGENT_EXPERIENCE_LEVEL NVARCHAR(50),
-                                    AGENT_EDUCATION_LEVEL NVARCHAR(50)
-                                );
-                                
-                                CREATE TABLE STAGE_DW.Promotions (
-                                    PROMO_ID INT PRIMARY KEY,
-                                    PROMO_NAME VARCHAR(30) NOT NULL,
-                                    PROMO_SUBCATEGORY VARCHAR(30) NOT NULL
-                                );
-                        </code></pre>
-                    <header>
-                        <h2>Sales Performance Analysis by Agent</h2>
-                        <p>Identifies top-performing agents based on sales revenue and experience level.</p>
-                    </header>
-                        <pre><code>
-                                SELECT a.AGENT_ID, a.AGENT_EXPERIENCE_LEVEL, 
-                                COUNT(s.SALE_ID) AS Total_Sales, 
-                                SUM(s.SALE_AMOUNT) AS Total_Revenue
-                                FROM Sales s
-                                JOIN Agents a ON s.AGENT_ID = a.AGENT_ID
-                                GROUP BY a.AGENT_ID, a.AGENT_EXPERIENCE_LEVEL
-                                ORDER BY Total_Revenue DESC;
-                         
-                        </code></pre>
-                    <header>
-                        <h2>Analyzing Promotion Effectiveness</h2>
-                        <p>Reveals which promotions drive the highest revenue and sales volume.</p>
-                    </header>
-                        <pre><code>
-                                SELECT p.PROMO_NAME, COUNT(s.SALE_ID) AS Sales_During_Promo, 
-                                SUM(s.SALE_AMOUNT) AS Revenue_Generated
-                                FROM Sales s
-                                JOIN Promotions p ON s.PROMO_ID = p.PROMO_ID
-                                GROUP BY p.PROMO_NAME
-                                ORDER BY Revenue_Generated DESC;
-                        </code></pre>
-                    
-                    <header>
-                        <h2>Customer Purchasing Trends</h2>
-                        <p>Tracks monthly sales trends to identify peak purchasing periods.</p>
-                    </header>
-                        <pre><code>
-                            SELECT FORMAT(SALE_DATE, 'yyyy-MM') AS Sales_Month, 
-                            COUNT(SALE_ID) AS Total_Sales, 
-                            SUM(SALE_AMOUNT) AS Total_Revenue
-                            FROM Sales
-                            GROUP BY FORMAT(SALE_DATE, 'yyyy-MM')
-                            ORDER BY Sales_Month;
-                        </code></pre>
-                            </section> -->
+                            
+                   
                             <ul class="actions special">
                                 <li><a href="https://github.com/Stephkd123/Portfolio-Projects/tree/main/Data%20ETL" class="button large">View notebook on GitHub</a></li>
                             </Git File</a></li>
+                            
                             </ul>
+
                         </div>
+                    <p>--------------------------------------------------------------------------------------------------------------------------</p>
+
+                    <header>
+                        <h2>Machine Learning models</h2>
+                        <p>As a data Scientist I task myself to keep learning and improving my skills set with ETL processes<br>
+                        and Machine learning models. Below is the link to GitHub folder with explanatory notebooks on my expertise<br>
+                        with various Machine Learning Models on practical Data-driven projects:</p>
+                        <ul>
+                            <li><b>Decision Tree model</b> on Titanic dataset, survival prediction.</li>
+                            <li><b>Regression Tree model</b> on patient data - Heart ailment prediction.</li>
+                            <li>Models updated often...</li>
+                            <ul class="actions special">
+                                <li><a href="https://github.com/Stephkd123/Portfolio-Projects/tree/main/ML%20Model_NB" class="button large">View notebooks on GitHub</a></li>
+                            </Git File</a></li>
+                            </ul>
+                        </ul>
+                    </header>
                     <div id="copyright">
 						<ul><li>BY Stephen Keyen II</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
