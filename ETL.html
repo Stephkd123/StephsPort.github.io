@@ -19,27 +19,85 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="#" class="logo">Data Engineering project</a>
+						<a href="#" class="logo">Data/ML Engineering project</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-                            <li><a href="index.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li><a href="generic.html">About Me</a></li>
-							<li><a href="sales.html">2:Analyst </a></li>
-							<li><a href="flameAI.html">3:AI Engineer</a></li>
-							<li><a href="DS_ML.html">4: Data/ML Engineer</a></li>
+							<!-- <li><a href="ETL.html">1:Engineer</a></li> -->
+							<li><a href="sales.html">1:Analyst </a></li>
+							<!-- <li><a href="flameAI.html">3:AI Engineer</a></li> -->
+							<li><a href="ETL.html">2:Data/ML Engineer</a></li>
 						</ul>
+                        
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
                     <div id="main">
-                        <section class="post">
+                        <section class="post"> 
+                        <h2>Project 1:</h2>
                             <header>
-                                <i><h1>Comprehensive ETL process for data Warehouse</h1></i>
+                                <i><h1>Analytics and  ML for Tissue suitability Classification</h1></i>
+                                <h2>Domain: Healthcare Analytics </h2>
+                                <p> </p>
+                                <h2>Project Overview</h2>
+                                <h4>Focus: Applied Machine Learning, Data Engineering, Feature Engineering </h4>
+                                <h4>Tools: Python, SQL, Pandas, Scikit-learn, XGBoost, Random Forest, Logistic Regression </h4>
+                            </header>
+                            
+                    <p>This project is a collaborative applied machine learning initiative focused on <b>classifying donor tissue suitability</b> using large, relational healthcare datasets. <br>
+                        The objective was to translate complex donor, tissue, and agency-level data into <b>interpretable predictive models</b> capable of supporting data-driven decision-making in tissue suitability assessment.</p>
+
+                            <h3>The project addressed three core analytical questions:</h3>
+                            <ul>
+                                <li>Which donor and tissue characteristics are most predictive of tissue suitability?</li> 
+                                <li>How does agency-level behavior and performance influence suitability outcomes?</li> 
+                                <li>Can machine learning models reliably classify tissue suitability using engineered clinical and operational features?</li>
+                            </ul>
+                            
+                            <h3>Data Engineering & Preparation</h3>
+                            <ul>
+                            <p>I led the SQL and ETL pipeline, extracting and transforming data from multiple relational database tables to produce an analytics-ready dataset at the donor–tissue grain. This involved:</p>
+                            <ul>
+                                <li>Designing and optimizing complex SQL joins and pivots across donor, tissue, and characterization tables.</li> 
+                                <li>Ensuring data integrity while scaling to ~68,000+ records, representing the final analytical dataset.</li> 
+                                <li>Standardizing temporal variables (e.g., converting mixed time units to minutes or years).</li>
+                                <li>Handling missing values and outliers using domain-informed rules rather than blanket row deletion.</li> 
+                                <li>Creating derived features such as donor tissue counts, agency stratifications, and ischemic time indicators.</li>
+                            </ul>
+                            <p><b>The result was a clean, reproducible dataset supporting both exploratory analysis and modeling.</b></p>
+
+                            <h3>Feature Engineering & Analytical Design</h3>
+                            <ul>
+                            <p>Significant effort was invested in feature engineering to capture real-world behavior and trends, including:</p>
+                            <ul>
+                                <li>Agency-level performance metrics (e.g., suitability rates, normalized agency scores).</li> 
+                                <li>Binary and categorical encodings to preserve interpretability while enabling model compatibility</li> 
+                                <li>Domain-informed thresholds to retain underrepresented agencies without introducing bias</li>
+                            </ul>
+                            <p><b>These features enabled both predictive performance and explainability, which is critical in healthcare analytics contexts.</b></p>
+
+                            <h3>Machine Learning Modeling</h3>
+                            <ul>
+                            <p>Multiple supervised learning approaches were evaluated to balance accuracy, robustness, and interpretability:</p>
+                            <ul>
+                                <li>Logistic Regression (baseline interpretability).</li> 
+                                <li>XGBoost</li> 
+                                <li>Association Rule Mining for pattern discovery</li>
+                                <li>Random Forest</li> 
+                            </ul>
+                            <p><b>Models were trained and evaluated using cross-validation and appropriate classification metrics, with feature importance and association rules used 
+                                to surface actionable insights rather than black-box predictions.<br>
+                                         Data restricted due to Data compliance Agreements
+                            </b></p>
+                            <p>Each team member independently explored modeling strategies, promoting robustness through comparative experimentation and reducing confirmation bias.</p>
+                            <header>
+                                <i><h1>Comprehensive ETL process for Movie rental data Warehouse</h1></i>
                                 <h2>Project Description: </h2>
                             </header>
                     <p>This project demonstrates the design and implementation of a data warehouse for a movie rental system, showcasing the entire ETL (Extract, Transform, Load) process. The goal is to understand sales trends, marketing, and operational efficiency by tracking product sales, ensuring accurate reporting, and gaining customer insights. This project highlights my proficiency in data warehousing, ETL processes, and business intelligence.</p>
@@ -95,30 +153,7 @@
                             <ul class="actions special">
                                 <li><a href="https://github.com/Stephkd123/Portfolio-Projects/blob/main/README.md" class="button large">View Git File</a></li>
                             </ul>
-                        </article> 
-
-                        <h2>Project 2:</h2>
-                            <header>
-                                <i><h1>Tissue Suitability ETL Pipeline </h1></i>
-                                <h2>Project Description:</h2>
-                            </header>
-                    <p>An enterprise-ready SQL-based pipeline for transforming and analyzing donor tissue records. Built to support predictive modeling and regulatory screening within healthcare systems. Led the transformation of complex donor 
-                        and tissue data into an analysis-ready dataset that supports tissue suitability predictions and research-based modeling.</p>
-                    
-
-                            <h3>Key features:</h3>
-                            <ul>
-                                <li>Developed multi-stage SQL scripts to pivot and join normalized donor and tissue data using compound keys (e.g., CHARG, MATNR), enabling complete tissue screening insights.</li> 
-                                <li>Validated data consistency and completeness using aggregation logic, reducing mismatch errors by 25% in downstream models.</li> 
-                                <li>Validation logic to ensure consistency, integrity, and record traceability</li>  
-                                <li>Collaborated with data science teams to ensure alignment of engineered features with business goals and regulatory compliance.</li>
-                            </ul>
-                            
-                        <p> <b>This project showcases my ability to design and implement a robust data warehousing solution, manage complex ETL processes, and provide actionable business insights through decision support views and optimized queries. It highlights my technical skills in data extraction, transformation, and loading, as well as my understanding of business intelligence and data analytics, making me a strong candidate for data science roles. </b></p>               
-                                 </section>
-                            <ul class="actions special">
-                                <li><a href="https://github.com/hqy5038/IST_343_LNH2/blob/main/Read_me.txt" class="button large">View Git File</a></li>
-                            </ul>
+                        </article>
                         </div>
                     <div id="copyright">
 						<ul><li>BY Stephen Keyen II</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
